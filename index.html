@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cars</title>
+    <link rel="stylesheet" href="index.css" />
+    <script src="index.js"></script>
+  </head>
+
+  <body>
+    <div class="logo"><img src="../img/logo.png" alt="logo" /></div>
+    <div class="filter">
+      <label for="minYear">Minimum Year:</label>
+      <select id="minYear">
+        <option value="">No filter</option>
+        <option value="2014">2014</option>
+        <option value="2015">2015</option>
+        <option value="2016">2016</option>
+        <option value="2017">2017</option>
+        <option value="2018">2018</option>
+        <option value="2019">2019</option>
+        <option value="2020">2020</option>
+      </select>
+      <label for="maxYear">Maximum Year:</label>
+      <select id="maxYear">
+        <option value="">No filter</option>
+        <option value="2014">2014</option>
+        <option value="2015">2015</option>
+        <option value="2016">2016</option>
+        <option value="2017">2017</option>
+        <option value="2018">2018</option>
+        <option value="2019">2019</option>
+        <option value="2020">2020</option>
+      </select>
+      <label for="carMake">Car Make:</label>
+      <select id="carMake">
+        <option value="">No filter</option>
+        <option value="Toyota">Toyota</option>
+        <option value="Honda">Honda</option>
+        <option value="Ford">Ford</option>
+        <option value="Nissan">Nissan</option>
+        <option value="Chevrolet">Chevrolet</option>
+        <option value="Volkswagen">Volkswagen</option>
+        <option value="Hyundai">Hyundai</option>
+        <option value="Subaru">Subaru</option>
+        <option value="Mazda">Mazda</option>
+        <option value="Kia">Kia</option>
+        <option value="Dodge">Dodge</option>
+        <option value="Cadillac">Cadillac</option>
+        <option value="Jaguar">Jaguar</option>
+        <option value="Tesla">Tesla</option>
+        <option value="Porsche">Porsche</option>
+        <option value="Lexus">Lexus</option>
+        <option value="BMW">BMW</option>
+      </select>
+
+      <label for="mileage">Maximum Mileage:</label>
+      <select id="mileage">
+        <option value="">No filter</option>
+        <!-- After typing out all the cards I didn't feel like typing out this drop down menu lol -->
+        <!-- So I just have it go up by 5000 each time to cover various ranges -->
+        <script>
+          for (let mileage = 15000; mileage <= 65000; mileage += 5000) {
+            document.write(`<option value="${mileage}">${mileage}</option>`);
+          }
+        </script>
+      </select>
+
+      <label for="price">Maximum Price:</label>
+      <select id="price">
+        <option value="">No filter</option>
+        <!-- Same reason as above -->
+        <script>
+          for (let price = 12000; price <= 70000; price += 2000) {
+            document.write(`<option value="${price}">${price}</option>`);
+          }
+        </script>
+      </select>
+
+      <label for="color">Color:</label>
+      <select id="color">
+        <option value="">No filter</option>
+        <option value="Silver">Silver</option>
+        <option value="White">White</option>
+        <option value="Black">Black</option>
+        <option value="Blue">Blue</option>
+        <option value="Gray">Gray</option>
+        <option value="Green">Green</option>
+        <option value="Red">Red</option>
+      </select>
+    </div>
+    <!-- cards -->
+    <div class="card-grid">
+      <div class="card">
+        <h1>Year: 2018</h1>
+        <h1>Make: Toyota</h1>
+        <h1>Model: Camry</h1>
+        <h1>Mileage: 30000</h1>
+        <h1>Price: $18000</h1>
+        <h1>Color: Silver</h1>
+        <h1>Gas Mileage: 25 mpg city, 35 mpg highway</h1>
+      </div>
+
+      <div class="card">
+        <h1>Year: 2016</h1>
+        <h1>Make: Honda</h1>
+        <h1>Model: Civic</h1>
+        <h1>Mileage: 45000</h1>
+        <h1>Price: $14000</h1>
+        <h1>Color: White</h1>
+        <h1>Gas Mileage: 30 mpg city, 40 mpg highway</h1>
+      </div>
+
+      <div class="card">
+        <h1>Year: 2017</h1>
+        <h1>Make: Ford</h1>
+        <h1>Model: Fusion</h1>
+        <h1>Mileage: 35000</h1>
+        <h1>Price: $16000</h1>
+        <h1>Color: Black</h1>
+        <h1>Gas Mileage: 28 mpg city, 38 mpg highway</h1>
+      </div>
+
+      <div class="card">
+        <h1>Year: 2019</h1>
+        <h1>Make: Nissan</h1>
+        <h1>Model: Altima</h1>
+        <h1>Mileage: 25000</h1>
+        <h1>Price: $17000</h1>
+        <h1>Color: Blue</h1>
+        <h1>Gas Mileage: 27 mpg city, 36 mpg highway</h1>
+      </div>
+
+      <div class="card">
+        <h1>Year: 2015</h1>
+        <h1>Make: Chevrolet</h1>
+        <h1>Model: Malibu</h1>
+        <h1>Mileage: 50000</h1>
+        <h1>Price: $12000</h1>
+        <h1>Color: Red</h1>
+        <h1>Gas Mileage: 25 mpg city, 37 mpg highway</h1>
+      </div>
+
+      <div class="card">
+        <h1>Year: 2016</h1>
+        <h1>Make: Volkswagen</h1>
+        <h1>Model: Passat</h1>
+        <h1>Mileage: 40000</h1>
+        <h1>Price: $15000</h1>
+        <h1>Color: Gray</h1>
+        <h1>Gas Mileage: 29 mpg city, 40 mpg highway</h1>
+      </div>
+
+      <div class="card">
+        <h1>Year: 2020</h1>
+        <h1>Make: Hyundai</h1>
+        <h1>Model: Elantra</h1>
+        <h1>Mileage: 22000</h1>
+        <h1>Price: $16000</h1>
+        <h1>Color: Silver</h1>
+        <h1>Gas Mileage: 30 mpg city, 41 mpg highway</h1>
+      </div>
+
+      <div class="card">
+        <h1>Year: 2014</h1>
+        <h1>Make: Subaru</h1>
+        <h1>Model: Outback</h1>
+        <h1>Mileage: 60000</h1>
+        <h1>Price: $14000</h1>
+        <h1>Color: Green</h1>
+        <h1>Gas Mileage: 22 mpg city, 30 mpg highway</h1>
+      </div>
+
+      <div class="card">
+        <h1>Year: 2017</h1>
+        <h1>Make: Mazda</h1>
+        <h1>Model: CX-5</h1>
+        <h1>Mileage: 32000</h1>
+        <h1>Price: $19000</h1>
+        <h1>Color: Blue</h1>
+        <h1>Gas Mileage: 24 mpg city, 31 mpg highway</h1>
+      </div>
+
+      <div class="card">
+        <h1>Year: 2018</h1>
+        <h1>Make: Kia</h1>
+        <h1>Model: Sorento</h1>
+        <h1>Mileage: 28000</h1>
+        <h1>Price: $17000</h1>
+        <h1>Color: White</h1>
+        <h1>Gas Mileage: 22 mpg city, 29 mpg highway</h1>
+      </div>
+
+      <div class="card">
+        <h1>Year: 2015</h1>
+        <h1>Make: Dodge</h1>
+        <h1>Model: Challenger</h1>
+        <h1>Mileage: 30000</h1>
+        <h1>Price: $24000</h1>
+        <h1>Color: Black</h1>
+        <h1>Gas Mileage: 19 mpg city, 30 mpg highway</h1>
+      </div>
+
+      <div class="card">
+        <h1>Year: 2017</h1>
+        <h1>Make: Cadillac</h1>
+        <h1>Model: XT5</h1>
+        <h1>Mileage: 28000</h1>
+        <h1>Price: $32000</h1>
+        <h1>Color: Red</h1>
+        <h1>Gas Mileage: 19 mpg city, 27 mpg highway</h1>
+      </div>
+
+      <div class="card">
+        <h1>Year: 2018</h1>
+        <h1>Make: Jaguar</h1>
+        <h1>Model: F-PACE</h1>
+        <h1>Mileage: 26000</h1>
+        <h1>Price: $38000</h1>
+        <h1>Color: Blue</h1>
+        <h1>Gas Mileage: 18 mpg city, 23 mpg highway</h1>
+      </div>
+
+      <div class="card">
+        <h1>Year: 2019</h1>
+        <h1>Make: Tesla</h1>
+        <h1>Model: Model S</h1>
+        <h1>Mileage: 18000</h1>
+        <h1>Price: $55000</h1>
+        <h1>Color: Black</h1>
+        <h1>Gas Mileage: Electric (370 miles per charge)</h1>
+      </div>
+
+      <div class="card">
+        <h1>Year: 2020</h1>
+        <h1>Make: Porsche</h1>
+        <h1>Model: Cayenne</h1>
+        <h1>Mileage: 22000</h1>
+        <h1>Price: $68000</h1>
+        <h1>Color: White</h1>
+        <h1>Gas Mileage: 20 mpg city, 26 mpg highway</h1>
+      </div>
+
+      <div class="card">
+        <h1>Year: 2017</h1>
+        <h1>Make: Lexus</h1>
+        <h1>Model: ES</h1>
+        <h1>Mileage: 29000</h1>
+        <h1>Price: $26000</h1>
+        <h1>Color: White</h1>
+        <h1>Gas Mileage: 21 mpg city, 30 mpg highway</h1>
+      </div>
+
+      <div class="card">
+        <h1>Year: 2016</h1>
+        <h1>Make: BMW</h1>
+        <h1>Model: 5 Series</h1>
+        <h1>Mileage: 32000</h1>
+        <h1>Price: $27000</h1>
+        <h1>Color: Black</h1>
+        <h1>Gas Mileage: 23 mpg city, 34 mpg highway</h1>
+      </div>
+    </div>
+  </body>
+</html>

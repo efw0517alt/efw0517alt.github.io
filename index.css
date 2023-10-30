@@ -1,0 +1,41 @@
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+  background-color: bisque;
+}
+
+.card-grid {
+  padding-top: 60px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+body {
+  background-image: url("https://cdn.discordapp.com/attachments/347539305679421442/1168360521125347409/background.png?ex=65517b87&is=653f0687&hm=b719c1e34b9c658950bd8164219c2d1819e467cd92287cd79838c4d0c1b5ac88&");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.filter {
+  font-size: 25px;
+  background-color: #75d6a4;
+  display: inline-block;
+  border-radius: 5px;
+  padding: 10px 10px;
+  justify-content: center;
+  display: flex;
+  justify-content: center;
+  margin-left: 230px;
+  margin-right: 230px;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
