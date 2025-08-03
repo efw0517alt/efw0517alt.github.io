@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
     "I AM THIS PLACE, AND THIS PLACE IS ME.",
     "HOW DID YOU END UP HERE?",
     "",
-    "YOUR SKIN IS LOOKS SO <BR> SOFT.",
+    "YOUR SKIN LOOKS SO <BR> SOFT.",
     "I WILL ENJOY IT.",
     "YOU AND ME, HERE",
     "FOREVER",
