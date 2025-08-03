@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
   var unYellowNextTurn = false;
   var humidityTrigger = false;
   var eyeTrigger = false;
+  var timerCringe;
   const himText = [
     "LET US BEGIN",
     "DO YOU SEE NOW? THE FUTILITY OF IT ALL?",
@@ -348,7 +349,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const waterPiece = document.getElementById("waterPiece");
 
   function vaporGrow() {
-    clearTimeout();
+    clearTimeout(timerCringe);
     const fan = elements["fan"].value;
 
     waterPiece.classList.remove("vaporGrowth");
@@ -367,7 +368,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (humidityTrigger == false) {
       humidityTrigger = true;
       alert(
-        "I SAID THIS PLACE WAS TO BE FREE OF FOG! WHY ARE YOU LETTING THAT GET IN BOTH OF MY EYES? YOU'RE TRYING MY PATIENCE!"
+        "I SAID THIS PLACE WAS TO BE FREE OF FOG! WHY ARE YOU LETTING THAT GET NER BOTH OF MY EYES? YOU'RE TRYING MY PATIENCE!"
       );
       const rightHand = document.getElementById("rightHand");
       const leftFiller = document.getElementById("leftFiller");
