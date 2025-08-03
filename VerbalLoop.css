@@ -1,0 +1,130 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: black;
+  color: white;
+  font-family: monospace;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: 30vh 40vh 30vh;
+}
+
+.top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+}
+
+.him {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2vw;
+  width: 100%;
+  margin-top: -8vh;
+}
+
+.him img {
+  margin-top: 5vh;
+  height: auto;
+  width: auto;
+  object-fit: contain;
+}
+
+.reverse {
+  transform: scaleX(-1);
+}
+
+h1 {
+  text-align: center;
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  margin-top: -5vh;
+  position: relative;
+}
+.hide {
+  display: none;
+}
+.mouseCursor {
+  cursor: pointer;
+}
+
+.middle {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gamepieces {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+#keyPiece {
+  max-height: 60%;
+  width: auto;
+  height: auto;
+}
+
+.doorPaddingOff {
+  padding-left: 45vh;
+}
+.fanPaddingOff {
+  padding-right: 45vh;
+}
+.keyOff {
+  margin: 0;
+}
+
+.keyOn {
+  margin-left: 45vh;
+}
+.keyReverse {
+  margin-right: 45vh;
+}
+.waterOff {
+  margin: 0;
+}
+
+.waterOn {
+  margin-left: 90vh;
+}
+.waterReverse {
+  margin-right: 90vh;
+}
+
+.bottom {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 2vh;
+  position: relative;
+}
+
+.choices {
+  margin-top: 17vh;
+}
+
+select {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+option {
+  color: white;
+  cursor: pointer;
+}

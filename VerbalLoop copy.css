@@ -1,0 +1,69 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: black;
+  color: white;
+  font-family: monospace;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden; /* prevent scrollbars */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; /* space out top images and bottom text */
+}
+
+.him {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2vw;
+
+  width: 100%;
+  padding: 0vh 0;
+}
+
+.him img {
+  /* scale images based on screen height */
+  padding-right: 20vh;
+  padding-left: 20vh;
+  width: auto;
+  height: auto;
+}
+
+.reverse {
+  transform: scaleX(-1);
+}
+
+select {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+option {
+  color: white;
+  cursor: pointer;
+}
+
+.gamepieces {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transform-origin: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  pointer-events: none; /* prevents them from interfering with interaction */
+}
+h1 {
+  text-align: center;
+  font-size: clamp(1rem, 2.5vw, 2rem); /* scales text size based on screen */
+  padding: 0vh;
+  line-height: 1.4;
+}

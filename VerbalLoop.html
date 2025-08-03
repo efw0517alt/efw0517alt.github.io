@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Verbal Loop</title>
+    <link rel="stylesheet" href="VerbalLoop.css" />
+    <script src="VerbalLoop.js"></script>
+  </head>
+  <body>
+    <audio id="laughAudio">
+      <source src="laugh.wav" type="audio/wav" />
+    </audio>
+
+    <div class="top">
+      <audio id="actionAudio">
+        <source src="hit.wav" type="audio/wav" />
+      </audio>
+      <audio id="defeatAudio">
+        <source src="defeat.wav" type="audio/wav" />
+      </audio>
+      <div id="him" class="him">
+        <img id="leftFiller" class="hide" src="filler.gif" />
+        <img id="leftHand" class="hide" src="handnormal.gif" />
+        <img id="eye" class="mouseCursor" src="eye.gif" />
+        <img id="rightHand" class="hide" src="handnormal.gif" class="reverse" />
+        <img id="rightFiller" class="hide" src="filler.gif" />
+      </div>
+      <h1 id="himText">LET US BEGIN</h1>
+    </div>
+
+    <div class="middle">
+      <div class="gamepieces">
+        <img id="fanPiece" class="fanPaddingOff" src="fan.png" />
+        <img id="keyPiece" class="keyOff" src="keyred.png" />
+        <img id="doorPiece" class="doorPaddingOff" src="doorblue.png" />
+      </div>
+      <style>
+        @keyframes vaporGrowth {
+          from {
+            transform: scale(1);
+          }
+          to {
+            transform: scale(6);
+          }
+        }
+
+        .vaporGrowth {
+          animation: vaporGrowth 60s forwards;
+        }
+      </style>
+      <div><img id="waterPiece" class="waterOff" src="water.png" /></div>
+    </div>
+    <div class="bottom">
+      <div class="choices" id="modifiers">
+        The key is
+        <select name="key" id="key">
+          <option value="red">Red</option>
+          <option value="blue">Blue</option>
+          <option value="green">Green</option>
+          <option value="purple">Purple</option>
+          <option value="yellow">Yellow</option>
+        </select>
+        <p></p>
+        The door is
+        <select name="door" id="door">
+          <option value="blue">Blue</option>
+          <option value="red">Red</option>
+          <option value="green">Green</option>
+          <option value="purple">Purple</option>
+          <option value="yellow">Yellow</option>
+        </select>
+        <p></p>
+        The fan is
+        <select name="fan" id="fan">
+          <option value="off">Off</option>
+          <option value="on">On</option>
+          <option value="reversed">Reversed</option>
+        </select>
+        <p></p>
+        The water is
+        <select name="water" id="water">
+          <option value="+0">Normal</option>
+          <option value="+1">W Cyle +1</option>
+          <option value="+2">W Cycle +2</option>
+        </select>
+        <select name="final" id="final" class="hide">
+          <option value="a">HE IS ALIVE</option>
+          <option value="d">HE IS DEAD</option>
+        </select>
+      </div>
+    </div>
+  </body>
+</html>

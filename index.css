@@ -1,4 +1,47 @@
-body{
-   
-    background-image: url('fog.gif');
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: black;
+  color: white;
+  font-family: monospace;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.him {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2vw;
+
+  width: 100%;
+  padding: 0vh 0;
+}
+
+.him img {
+  max-height: 40vh;
+  padding-right: 20vh;
+  padding-left: 20vh;
+  width: auto;
+  height: auto;
+}
+
+.reverse {
+  transform: scaleX(-1);
+}
+
+h1 {
+  text-align: center;
+  font-size: clamp(1rem, 2.5vw, 2rem);
+  padding: 0vh;
+  line-height: 1.4;
 }

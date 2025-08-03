@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verbal Loop</title>
+    <link rel="stylesheet" href="index.css">
+     <script>
+    document.addEventListener('click', function playAudioOnce() {
+    const audio = document.getElementById('breatheAudio');
+    audio.play();
+    document.removeEventListener('click', playAudioOnce);
+  });
+    setTimeout(function() {
+      window.location.href = "scene4.html"; 
+    }, 5000);
+  </script>
+</head>
+<body>
+      <audio id="breatheAudio">
+  <source src="breathe.wav" type="audio/wav">
+</audio>
+    <div id="him" class="him" >
+        <img src="handnormal.gif"  >
+        <img src="eye.gif"  >
+        <img src="handnormal.gif"  class="reverse">
+    </div>
+    <h1>FINE THEN. I PRESENT YOU WITH A <BR> CHALLENGE.<BR> THE RULES ARE SIMPLE</h1>
+ 
+</body>
+</html>

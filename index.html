@@ -1,20 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=
-    , initial-scale=1.0">
-    <title>John website</title>
-    <script src="index.js"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Verbal Loop</title>
     <link rel="stylesheet" href="index.css" />
+    <style>
+      #beginButton {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 1em 2em;
+        font-size: 1.5em;
+        background-color: black;
+        color: white;
+        border: 2px solid white;
+        cursor: pointer;
+        z-index: 1000;
+      }
 
-</head>
-<body>
-    
-<h1> Big Thursday John has now made $ <div id="counter">0</div> </h1>
-<h2>  <img src="../fog.gif" alt="logo" /></h2>
+      #sceneText {
+        text-align: center;
+        margin-top: 50px;
+        font-size: 1.5em;
+        color: white;
+      }
 
+      body {
+        background-color: black;
+        color: white;
+        font-family: sans-serif;
+      }
 
+      .him {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin-top: 2rem;
+      }
 
-</body>
+      .reverse {
+        transform: scaleX(-1);
+      }
+    </style>
+  </head>
+  <body>
+    <audio id="breatheAudio">
+      <source src="breathe2.wav" type="audio/wav" />
+    </audio>
+
+    <button id="beginButton">CONSENT</button>
+
+    <div id="him" class="him" style="display: none">
+      <img src="handnormal.gif" />
+      <img src="eye.gif" />
+      <img src="handnormal.gif" class="reverse" />
+    </div>
+
+    <h1 id="sceneText"></h1>
+
+    <script>
+      const scenes = [
+        "HOW LUCKY WE ARE, TO MEET IN A PLACE LIKE THIS.<br>FREE OF TIME<br>FREE OF FOG<br>FREE OF OTHERS<br>JUST<br>YOU<br><br>AND<br><br>ME",
+        "OH?<br>YOU WANT TO<br><br><br>LEAVE?",
+        "FINE THEN. I PRESENT YOU WITH A <BR> CHALLENGE.<BR> THE RULES ARE SIMPLE",
+        "THE KEY AND THE DOOR MUST BE THE SAME COLOR.<BR> THE KEY MUST BE CLOSE TO THE DOOR. <BR> THE DOOR MUST NOT BE FROZEN SHUT. <BR> SIMPLE <BR> IS IT NOT?",
+        "HOWEVER <BR> WHENEVER YOU CHANGE AN OBJECT'S PROPERTIES <BR> I TOO WILL WILL MAKE AN ADJUSTMENT <BR> SO, AS I SAID <BR> YOU <BR> AND <BR> I <BR> IN A LOOP <BR> FOREVER <BR> ENJOY",
+      ];
+
+      let currentScene = 0;
+      const audio = document.getElementById("breatheAudio");
+
+      function showScene(index) {
+        if (index >= scenes.length) {
+          window.location.href = "VerbalLoop.html";
+        }
+
+        const textElement = document.getElementById("sceneText");
+        textElement.innerHTML = scenes[index];
+
+        audio.play();
+
+        setTimeout(() => {
+          currentScene++;
+          showScene(currentScene);
+        }, 6200);
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const beginButton = document.getElementById("beginButton");
+        const himDiv = document.getElementById("him");
+
+        beginButton.addEventListener("click", () => {
+          beginButton.style.display = "none";
+          himDiv.style.display = "flex";
+          showScene(currentScene);
+        });
+      });
+    </script>
+  </body>
 </html>

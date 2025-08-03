@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verbal Loop</title>
+    <link rel="stylesheet" href="index.css">
+     <script>
+    document.addEventListener('click', function playAudioOnce() {
+    const audio = document.getElementById('breatheAudio');
+    audio.play();
+    document.removeEventListener('click', playAudioOnce);
+  });
+    setTimeout(function() {
+      window.location.href = "VerbalLoop.html"; 
+    }, 5000);
+  </script>
+</head>
+<body>
+      <audio id="breatheAudio">
+  <source src="breathe.wav" type="audio/wav">
+</audio>
+    <div id="him" class="him" >
+        <img src="handnormal.gif"  >
+        <img src="eye.gif"  >
+        <img src="handnormal.gif"  class="reverse">
+    </div>
+    <h1> HOWEVER <BR> WHENEVER YOU CHANGE AN OBJECT'S PROPERTIES <BR> I TOO WILL WILL MAKE AN ADJUSTMENT
+       <BR> SO, AS I SAID <BR> YOU AND <BR> IN A LOOP <BR> FOREVER <BR> ENJOY </h1>
+ 
+</body>
+</html>
