@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (pissed == 0) {
       laughAudio.play();
       textBox.innerHTML =
-        "AS LONG AS I AM OF SOUND MIND, THAT ACTIONS IS USELESS.";
+        "AS LONG AS I AM OF SOUND MIND, THAT ACTION IS USELESS.";
     }
     if (pissed == 1) {
       laughAudio.play();
